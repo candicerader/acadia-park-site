@@ -1,22 +1,26 @@
-/* Initially hide the menu items */
+/* ---------------------- */
+/* HAMBURGER MENU STYLES */
+/* ---------------------- */
+
+/* Hide the menu by default */
 #menu-items {
-    display: none;  /* Menu is hidden by default */
+    display: none;
     position: absolute;
     right: 0;
     top: 50px;
     background: #a59f7b;
     padding: 10px;
-    width: 200px; /* Adjust the width of the mobile menu */
-    border-radius: 5px; /* Optional: adds rounded corners */
-    z-index: 10; /* Ensure it displays above other content */
+    width: 200px;
+    border-radius: 5px;
+    z-index: 10;
 }
 
 /* Show the menu when 'active' class is added */
 #menu-items.active {
-    display: block;  /* Menu will be visible when the 'active' class is added */
+    display: block;
 }
 
-/* Optional: Styling for the hamburger button */
+/* Hamburger button style */
 .hamburger {
     font-size: 30px;
     background: none;
@@ -25,10 +29,11 @@
     cursor: pointer;
 }
 
-/* Styling for the menu items list */
+/* Menu item list styles */
 .menu-items ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .menu-items ul li {
@@ -40,19 +45,87 @@
     color: #50664f;
     font-size: 16px;
     display: block;
-    padding: 10px; /* Added padding to make the links clickable */
+    padding: 10px;
+    transition: background-color 0.3s ease;
 }
 
-/* Add hover effect on the links */
 .menu-items ul li a:hover {
     background-color: #722605;
     color: #fff;
 }
 
-/* General Styles */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body, h2 { font-family: Arial, sans-serif; }
-h2 { text-align: center; margin-top: 20px; background: #fff; }
+/* ---------------------- */
+/* GENERAL RESET & TYPO   */
+/* ---------------------- */
 
-/* Header & Footer */
-header, footer { display: flex; justify-content: space-between; align-items: center; padding: 20px; background: #a59f7b; color: #
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, h2 {
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    background: #fff;
+}
+
+/* ---------------------- */
+/* HEADER & FOOTER STYLES */
+/* ---------------------- */
+
+header, footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #a59f7b;
+    color: #50664f;
+}
+
+header .logo img,
+footer .footer-logo img {
+    height: 70px;
+}
+
+#search-bar {
+    padding: 10px;
+    margin-right: 20px;
+    border-radius: 10px;
+    border: none;
+    color: #50664f;
+}
+
+.menu {
+    position: relative;
+    color: #50664f;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .gear-boxes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gear-box {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    #menu-items {
+        width: 100%;
+        top: 60px;
+        right: 0;
+        left: 0;
+        text-align: center;
+    }
+
+    .menu-items ul li {
+        margin: 5px 0;
+    }
+}
